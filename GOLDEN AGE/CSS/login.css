@@ -1,0 +1,91 @@
+ body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   font-family: "Inconsolata", monospace;
+   background: radial-gradient(circle at center, #1351a8 0%, #000000 100%);   
+}
+
+.container {
+  background-color: #0d1a3391;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 350px;
+  box-shadow: 0 15px 35px rgba(231, 230, 230, 0.936);
+  border: 1px solid #646464;
+  text-align: center;
+}
+
+h2 {
+  color: #ffffff;
+  margin-bottom: 40px;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.input-grupo {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-grupo label {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.input-grupo input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #313235;
+  background-color: #050f24;
+  color: white;
+  box-sizing: border-box; /* Garante que o padding não quebre a largura */
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-grupo input:focus {
+  border-color: #4f97ea; /* Destaque ao clicar */
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px;
+  background-color: #ffffffbb;
+  color: #050f24;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: transform 0.2s, background-color 0.3s;
+  margin-top: 10px;
+}
+
+.login-button:hover {
+  background-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.login-informacao {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-informacao a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login-informacao a:hover {
+  text-decoration: underline;
+}

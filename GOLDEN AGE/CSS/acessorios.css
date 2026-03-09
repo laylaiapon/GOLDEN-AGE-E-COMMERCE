@@ -1,0 +1,88 @@
+body {
+  display: flex;          /* Ativa o modo flexível */
+  flex-direction: row;   /* Coloca os itens em linha (padrão) */
+  justify-content: center; /* Centraliza os cards na tela */
+  gap: 30px;             /* Cria um espaço de 20px entre os cards */
+  padding: 10px;
+  flex-wrap: wrap;
+  background: radial-gradient(circle at center, #0f3d7d 0%, #000000 100%);
+}
+
+.navegacao{
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.navegacao a {
+    color: lab(83.2% 0.35 0.11); /* Cor branca para destacar no azul escuro */
+    text-decoration: none; /* Tira o sublinhado padrão */
+    padding: 10px 30px;        /* Dá um respiro das bordas da tela */    
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    text-transform: uppercase; /* Deixa as letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras para um ar de luxo */
+    transition: 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+.navegacao a:hover {
+    color: #ffffff; /* Uma cor dourada ao passar o mouse, combina com relógios! */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.97), 
+                 0 0 10px rgba(255, 255, 255, 0.968);
+}
+  
+.relogio {
+    width: 250px; /* Altere este valor para diminuir ou aumentar */
+    height: auto;  /* Mantém a proporção original */
+    gap: 200px;          /* Define o espaço exato entre cada imagem */
+    border-radius: 50px;
+    background-color: hwb(30 73% 26% / 0.252);
+    
+}
+
+.card {
+  background-color: #3b3f468c; /* Tom ligeiramente mais claro que o fundo */
+  width: 200px;
+  padding: 20px 30px;
+  border-radius: 30px; /* Bordas bem arredondadas */
+  border: 1px solid #696c7465; /* Borda sutil para dar definição */
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(85, 86, 86, 0.44);
+}
+
+.card-imagem {
+  width: 80%;
+  margin-bottom: 30px;
+}
+
+.card-titulo {
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.card-link {
+  color: #d0cfcf;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #e9e8e8; /* Linha embaixo do texto */
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+
+.card-link:hover {
+  color: #ffffff;
+  border-bottom-color: #121113;
+   text-shadow: 0 0 30px rgba(250, 250, 250, 0.97), 
+                0 0 10px rgba(248, 248, 248, 0.968);
+}
+
+.container-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}

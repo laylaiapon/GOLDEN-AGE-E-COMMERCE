@@ -1,0 +1,82 @@
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle at center, #0a1f3d 0%, #000000 100%);
+}
+
+.navegacao{
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.navegacao a {
+    color: lab(83.2% 0.35 0.11); /* Cor branca para destacar no azul escuro */
+    text-decoration: none; /* Tira o sublinhado padrão */
+    padding: 10px 30px;        /* Dá um respiro das bordas da tela */    
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    text-transform: uppercase; /* Deixa as letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras para um ar de luxo */
+    transition: 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+.navegacao a:hover {
+    color: #ffffff; /* Uma cor dourada ao passar o mouse, combina com relógios! */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.97), 
+                 0 0 10px rgba(255, 255, 255, 0.968);
+}
+
+h1 {
+    text-align: center; 
+    width: 100%;
+    font-size: 80px; 
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 20px; /* Espaço largo entre letras */
+    
+    /* Efeito de Brilho (Glow) */
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.695), 
+                 0 0 30px rgba(255, 255, 255, 0.2);
+    }
+
+.relogio-destaque {
+    width: 650px; /* Largura do relógio */
+    height: auto;  /* altura */
+    position: absolute; /* Tira o relógio do fluxo e permite posicionar */
+    top: 65%; /* Mantém o relógio centralizado */
+    left: 50%; /* Empurra o relógio para além do centro */
+    transform: translate(-50%, -50%); /* largura e altura  para que o relógio fique no centro da tela */
+    filter: drop-shadow(0 0 50px rgba(0, 150, 255, 0.2));
+}
+
+.logo-destaque {
+    width: 100px; /* Largura do relógio */
+    height: auto;  /* altura */
+    position: absolute; /* Tira o relógio do fluxo e permite posicionar */
+    top: 38%; /* Mantém o relógio centralizado */
+    left: 6%; /* Empurra o relógio para além do centro */
+    transform: translate(-50%, -230%); /* largura e altura  para que o relógio fique no centro da tela */
+}
+
+button {
+    width: 480px; /* Largura do relógio */
+    top: 58%; /* Mantém o relógio centralizado */
+    left: 50%; /* Empurra o relógio para além do centro */
+    transform: translate(-50%, -50%); /* largura e altura  para que o relógio fique no centro da tela */
+    background: transparent;
+    border: 3px solid rgba(255, 255, 255, 0.558);
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    padding: 12px 40px;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    font-family: "Inconsolata", monospace;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.432);
+    color: rgb(0, 0, 0);
+}

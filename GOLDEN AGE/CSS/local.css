@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #012659 0%, #000000 100%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navegacao{
+    margin-top: 20px; 
+}
+
+.navegacao a {
+    color: lab(83.2% 0.35 0.11); /* Cor branca para destacar no azul escuro */
+    text-decoration: none; /* Tira o sublinhado padrão */
+    padding: 10px 30px;        /* Dá um respiro das bordas da tela */    
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    text-transform: uppercase; /* Deixa as letras maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras para um ar de luxo */
+    transition: 0.2s; /* Efeito suave ao passar o mouse */
+}
+
+.navegacao a:hover {
+    color: #ffffff; /* Uma cor dourada ao passar o mouse, combina com relógios! */
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.97), 
+                 0 0 10px rgba(255, 255, 255, 0.968);
+}
+
+
+
+/* Container que segura o Iframe */
+.mapa-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    border: 2px solid #133062;
+    border-radius: 15px;
+    overflow: hidden; /* Garante que o mapa respeite o arredondamento da borda */
+    box-shadow: 0 0 20px rgba(218, 217, 216, 0.67); /* Brilho dourado suave */
+}
+
+.mapa-container iframe {
+    display: block; /* Remove espaços vazios abaixo do iframe */
+    filter: grayscale(20%) contrast(1.1); /* Deixa o mapa levemente mais sóbrio/chique */
+}
+
+/* Título Dourado */
+.titulo-dourado {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    background: linear-gradient(to right, #0a0f36, #0a0f36, #8584848d, #0a0f36, #0a0f36);   
+    margin-bottom: 80px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.info-contato {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.endereco-bloco h3 {
+    color: #fff9a7;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 20px;
+}
+
+.redes-sociais h3 {
+    color: #fff9a7;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.endereco-bloco p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.links-redes a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border: 1px solid rgba(191, 149, 63, 0.4);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.links-redes a:hover {
+    background: #bf953f;
+    color: #000;
+}
+
+/* Seção de Parcerias */
+.parcerias-section {
+    border-top: 1px solid rgba(244, 217, 164, 0.362);
+    padding-top: 60px;
+}
+
+.parcerias-section h2 {
+    font-family: 'Playfair Display', serif;
+    color: #fff9a7;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.parcerias-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.parceiro-logo {
+    width: 180px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #666;
+    font-weight: bold;
+    font-size: 0.8rem;
+    filter: grayscale(100%);
+    transition: 0.4s;
+}
+
+.parceiro-logo:hover {
+    filter: grayscale(0%);
+    background: rgba(255, 255, 255, 0.1);
+    color: #bf953f;
+}
+
+
+/*  PARTE DE PARCERISAS  */
+.marcas-imag {
+  overflow: hidden;
+  padding: 5px 0; /* Espaçamento vertical */
+  white-space: nowrap;
+  position: relative;
+  background-color: #ffffff;
+}
+
+/* Efeito de fade nas bordas */
+.marcas-imag::before, .logo-imag::after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 150px;
+  z-index: 2;
+  pointer-events: none;
+}
+.marcas-imag::before {
+  left: 0;
+}
+.marcas-imag::after {
+  right: 0;
+}
+
+.logo-imag {
+  display: inline-flex;
+  align-items: flex-end;
+
+  /*velocidade(mais tempo = mais lento) */
+  animation: scroll 20s linear infinite; 
+  width: max-content;
+}
+
+/* O BLOCO DE CADA MARCA */
+.imag-item {
+  display: flex;
+  flex-direction: column; /* Coloca logo sobre o texto */
+  align-items: center; /* Centraliza horizontalmente */
+  margin: 0 40px; /* Espaçamento entre as marcas */
+  width: 140px; /* Largura fixa para manter o alinhamento do texto */
+}
+
+.imag-item img {
+  max-height: 65px; /* Tamanho controlado dos logos */
+  max-width: 100%;
+  height: auto;
+  /* Garante que os logos fiquem P&B/Cinza, como na imagem */
+  filter: grayscale(100%); 
+}
+
+/* A MÁGICA DO LOOP INFINITO */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Move até a METADE da largura total (início da cópia) */
+    transform: translateX(-50%);
+  }
+}
